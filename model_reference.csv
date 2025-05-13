@@ -1,0 +1,29 @@
+Company,Model,Version,API Types,Max Tokens per Call,Input Token Cost ($ per 1M),Output Token Cost ($ per 1M),Video Cost ($ per minute),Audio Cost ($ per minute),Image Cost ($ per image),Flat File Cost,Notes
+OpenAI,gpt-4o,latest,"Text, Image, Audio, Video",128000,5.00,15.00,,,,,"Supports text, image, audio, and video input. Image/Audio/Video input costs are based on tokenization at the input token rate. Audio pre-processing (e.g., Whisper) may incur separate charges if used explicitly."
+OpenAI,gpt-4-turbo,latest,"Text, Image",128000,10.00,30.00,,,,,"Supports text and image input. Image input cost is based on tokenization at the input token rate."
+OpenAI,gpt-3.5-turbo,latest,Text,16385,0.50,1.50,,,,,Latest versions (e.g., -0125) typically use 16k context window.
+OpenAI,Whisper,latest,Audio,,,,,0.006,,,Audio transcription.
+OpenAI,DALL-E 3,latest,Image,,,,,,0.040,,Image generation. Standard resolution ($0.040). HD costs more ($0.080).
+Google,Gemini 1.5 Pro,latest,"Text, Image, Audio, Video",1000000,1.25,5.00,0.0078,,0.0025,,"Multi-modal. Text token costs for <=128k context (Input: $1.25/1M, Output: $5.00/1M); higher for >128k context. Image cost per image from Vertex AI. Video cost per minute for video input. Audio input tokenized at input rate."
+Google,Gemini 1.5 Flash,latest,"Text, Image, Audio, Video",1000000,0.075,0.30,0.0012,0.00012,0.00002,,"Multi-modal. Text token costs for <=128k context (Input: $0.075/1M, Output: $0.30/1M); higher for >128k. Image/Video/Audio costs per item/minute from Vertex AI."
+Google,Gemini 1.0 Pro,latest,"Text, Image, Audio, Video",32000,0.50,1.50,0.12,0.06,0.0025,,"Multi-modal. Text token costs approx. from character rates ($0.000125/1k char input, $0.000375/1k char output). Image/Video/Audio costs per item/minute from Vertex AI."
+Google,Imagen 2,latest,Image,,,,,,0.020,,Image generation via Vertex AI.
+Google,Chirp (Speech-to-Text),latest,Audio,,,,,0.024,,,Audio transcription via Speech-to-Text API using Chirp model identifier.
+Anthropic,Claude 3 Opus,latest,"Text, Image",200000,15.00,75.00,,,,,"Supports text and image input. Image cost is based on tokenization and included in overall token costs."
+Anthropic,Claude 3 Sonnet,latest,"Text, Image",200000,3.00,15.00,,,,,"Supports text and image input. Image cost is based on tokenization and included in overall token costs."
+Anthropic,Claude 3 Haiku,latest,"Text, Image",200000,0.25,1.25,,,,,"Supports text and image input. Image cost is based on tokenization and included in overall token costs."
+Cohere,Command R+,latest,Text,128000,0.50,1.50,,,,,
+Cohere,Command R,latest,Text,128000,0.50,1.50,,,,,
+Mistral AI,Mistral Large,latest,Text,32000,8.00,24.00,,,,,Pricing via Mistral API (La Plateforme).
+Mistral AI,Mistral Medium,latest,Text,32000,2.70,8.10,,,,,Pricing via Mistral API (La Plateforme).
+Mistral AI,open-mistral-7b,latest,Text,32000,0.25,0.25,,,,,Pricing via Mistral API (La Plateforme). Often referred to as an iteration of Mistral Small.
+Mistral AI,Codestral,latest,Text,32000,2.00,6.00,,,,,Optimized for code. Pricing via Mistral API (La Plateforme).
+Meta (via Groq),Llama 3 70B,latest,Text,8192,0.59,0.79,,,,,Example pricing for open source model hosted on Groq. Max context 8k.
+Meta (via Groq),Llama 3 8B,latest,Text,8192,0.05,0.10,,,,,Example pricing for open source model hosted on Groq. Max context 8k.
+Perplexity,llama-3-sonar-small-32k-online,latest,Text,28000,0.20,0.20,,,,,Online model with web search. Cost is combined $0.20/1M tokens (input+output). Usable context from 32k window.
+Perplexity,llama-3-sonar-large-32k-online,latest,Text,28000,1.00,1.00,,,,,Online model with web search. Cost is combined $1.00/1M tokens (input+output). Usable context from 32k window.
+Perplexity,llama-3-sonar-small-32k-chat,latest,Text,28000,0.20,0.20,,,,,Offline chat model. Cost is combined $0.20/1M tokens (input+output). Usable context from 32k window.
+Perplexity,llama-3-sonar-large-32k-chat,latest,Text,28000,1.00,1.00,,,,,Offline chat model. Cost is combined $1.00/1M tokens (input+output). Usable context from 32k window.
+DeepSeek,deepseek-chat,latest,Text,8000,0.27,1.10,,,,,Based on information indicating $0.27/1M input tokens and $1.10/1M output tokens for new input. Max output tokens per reply often 8k.
+DeepSeek,deepseek-coder,latest,Text,8000,0.27,1.10,,,,,Often priced similarly to deepseek-chat for standard input/output; check official docs for any specific coder-tier pricing. Max output tokens per reply often 8k.
+DeepSeek,DeepSeek API (V3-like),latest,Text,128000,0.14,0.28,,,,,Represents very low cost tier (e.g. $0.14/$0.28 per 1M tokens). Max context usually large (e.g. 128k). Small per-call fee may apply.
